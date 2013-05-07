@@ -1,0 +1,81 @@
+body{
+	background-color: rgb(157,38,29);
+	padding-top: 50px;
+	padding-bottom: 60px;
+}
+@media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+.sidebar-nav {
+        padding: 9px 0;
+      }
+.boton-iniciar-sesion{
+    color:white;
+    margin-top: 2px;
+}
+@font-face{
+font-family: 'spincycle';
+src: url('../fuentes/spincycle.ttf'),url('../fuentes/spincycle.eot'); /* IE9 */
+}
+.fuente-geekonn{
+	font-family: 'spincycle';
+}
+.header{
+	background-color: rgb(157,38,29);
+}
+.titulo-header{
+	margin-top: 120px;
+	margin-bottom: 100px;
+	font-family: 'spincycle';
+	color: white;
+	font-size: 100px;
+}
+.logo-geekonn{
+	margin-top: 50px;
+	font-family: 'spincycle';
+	color: white;
+	font-size: 200px;
+	overflow: hidden;
+}
+.separador{
+	background-color: rgb(240,240,240);
+	height: 50px;
+}
+.contenedor-3-noticias{
+	margin-top: 15px;
+	max-height: 130px;
+	overflow-y: scroll; 
+}
+.clase-hr{
+	color: black;
+	background-color: black;
+}
+.img-publicacion-index{
+	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=.8);
+    -ms-transform:rotate(8deg);
+    -webkit-transform:rotate(180deg);
+    -o-transform:rotate(8deg);
+    -moz-transform:rotate(8deg); -moz-transform:skewx(25deg) translatex(150px);
+    font-size: 80px;
+}
+.publicacion-index{
+	background-color: rgb(245,245,245);
+	border-bottom: 2px solid;
+	border-color: rgb(220,220,220);
+}
+.google{
+    padding-left: 75px;
+    margin-left: 60px;
+    margin-top: 80px;
+}
+.twitter{
+    margin-top: 80px;
+}
+.top{
+    margin-top:250px;
+}
