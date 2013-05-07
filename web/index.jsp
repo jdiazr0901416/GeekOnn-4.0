@@ -3,7 +3,11 @@
     Created on : 07-may-2013, 0:38:57
     Author     : Julio
 --%>
-
+<%@taglib prefix="t" uri="http://java.sun.com/jsp/jstl/core" %>
+<%-- EXAMINA SESIONES ABIERTAS Y HACE VALIDACION--%>
+<t:if test="${sessionScope['sessionUsername']!=null}">
+    <% response.sendRedirect("geekonn.jsp");%>
+</t:if>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">

@@ -3,7 +3,11 @@
     Created on : 07-may-2013, 1:36:18
     Author     : Julio
 --%>
-
+<%@taglib prefix="t" uri="http://java.sun.com/jsp/jstl/core" %>
+<%-- EXAMINA SESIONES ABIERTAS Y HACE VALIDACION--%>
+<t:if test="${sessionScope['sessionUsername']!=null}">
+    <% response.sendRedirect("geekonn.jsp");%>
+</t:if>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -18,6 +22,7 @@
     <link href="recursos/bootstrap/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link rel="stylesheet" href="recursos/Font-Awesome-More/docs/assets/css/font-awesome.min.css">
     <link href="recursos/bootstrap/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <script src="recursos/ajax/acciones/registro/ajaxRegistro.js"></script>
     
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>

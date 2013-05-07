@@ -1,7 +1,10 @@
 package com.geekonn.servlets;
 
+import com.geekonn.system.SentenciasSQL;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +18,7 @@ import javax.servlet.http.HttpSession;
  */
 @WebServlet(name = "LogOut", urlPatterns = {"/LogOut"})
 public class LogOut extends HttpServlet {
-
+    SentenciasSQL sentenciasSQL;
     /**
      * Processes requests for both HTTP
      * <code>GET</code> and
@@ -28,15 +31,7 @@ public class LogOut extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        HttpSession sesion = request.getSession(true);
        
-        //Cerrar sesion
-        sesion.invalidate();
-       
-        //Redirecciono a index.jsp
-        response.sendRedirect("index.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -49,34 +44,48 @@ public class LogOut extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
+    public void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+		try {
+			doStuff(request, response);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 
-    /**
-     * Handles the HTTP
-     * <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
+   public void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+		try {
+			doStuff(request, response);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+   
+   public void doStuff(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException{
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        HttpSession sesion = request.getSession(true);
+       
+        String Username= (String)sesion.getAttribute("sessionUsername");
+        sentenciasSQL.ponerOffline(Username);
+        //Cerrar sesion
+        sesion.invalidate();
+       
+        //Redirecciono a index.jsp
+        response.sendRedirect("index.jsp");
+   }        
+        public void init(ServletConfig config) throws ServletException {
+		super.init(config);
+		try{
+			sentenciasSQL = new SentenciasSQL();
+                        // Aquí se declaran cuantos DatabaseHandler objects se requieran.
+		}catch(ClassNotFoundException e){
+			System.out.println("Clase no encontrada" + e.getMessage());
+		}catch(InstantiationException e){
+			System.out.println("Objeto no creado" + e.getMessage());
+		}catch(IllegalAccessException e){
+			System.out.println("Acceso ilegal" + e.getMessage());
+		}catch(SQLException e){
+			System.out.println("SQL exception. .-." + e.getMessage());
+		}
+	}
 }

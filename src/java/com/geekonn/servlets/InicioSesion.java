@@ -62,12 +62,15 @@ public class InicioSesion extends HttpServlet {
                     //Significa que la cuenta si existe
                     //OBTENGO EL NOMBRE DEL USUARIO Y LO GUARDO EN UNA SESION
                     int idUsuario = sentenciasSQL.devolverIDUsuario(correoOUsuario);
-                    String Username = sentenciasSQL.ObtenerUsernameSabiendoId(idUsuario);
-                    String nombre = sentenciasSQL.ObtenerNombreSabiendoId(idUsuario);
+                    String Username = sentenciasSQL.ObtenerUsernameSabiendoElid(idUsuario);
                     respuesta.setAttribute("sessionUsername", Username);
                     respuesta.setAttribute("sessionIdUsuario", idUsuario);
-                    respuesta.setAttribute("sessionNombre", nombre);
-                              
+                    if(sentenciasSQL.comprobarSiEstaOnline(Username)){
+                        String Username2 = "TEN CUIDADO ALGUIEN MAS YA ESTABA ONLINE CON TU USERNAME ANTES QUE TU";
+                        respuesta.setAttribute("sessionUsername", Username2);
+                    }else{
+                        sentenciasSQL.ponerOnline(Username);
+                    }          
                 }else{
                     respuesta.setAttribute("error", "Tus Datos estan mal");
                 }
@@ -77,7 +80,7 @@ public class InicioSesion extends HttpServlet {
                 System.out.println("SQL exception. .-." + e.getMessage());
             }
 
-       response.sendRedirect("index.jsp");
+       response.sendRedirect("Sesion.jsp");
         }
         public void init(ServletConfig config) throws ServletException {
 		super.init(config);

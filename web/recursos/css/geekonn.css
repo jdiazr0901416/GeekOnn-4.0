@@ -1,0 +1,11 @@
+.header{
+    font-family: 'spincycle';
+    background-color: rgb(157,38,29);
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.separador{
+	background-color: rgb(240,240,240);
+	height: 15px;
+}
