@@ -46,9 +46,15 @@ if(userName == null){
                   <div class="span3" id="informacion-perfil" data-toggle="tooltip" data-placement="bottom" title="prueba" data-original-title="prueba prueba">
                       <center><i class="icon-user icon-3x iconos-menu-perfil"></i><h4>&nbsp;Acerca de mi</h4></center>
                   </div>
-                  <div class="span3"></div>
-                  <div class="span3"></div>
-                  <div class="span3"></div>
+                  <div class="span3">
+                      <center><i class="icon-group icon-3x iconos-menu-perfil"></i><h4>&nbsp;Mis Amigos</h4></center>
+                  </div>
+                  <div class="span3">
+                      <center><i class="icon-comments icon-3x iconos-menu-perfil"></i><h4>&nbsp;Mis ultimas publicaciones</h4></center>
+                  </div>
+                  <div class="span3">
+                      <center><i class="icon-star icon-3x iconos-menu-perfil"></i><h4>&nbsp;Mis publicaciones favoritas</h4></center>
+                  </div>
               </div>
       </div>
        <!-- Le javascript
