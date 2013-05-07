@@ -71,11 +71,9 @@ src: url('../fuentes/spincycle.ttf'),url('../fuentes/spincycle.eot'); /* IE9 */
 .google{
     padding-left: 75px;
     margin-left: 60px;
-    margin-top: 80px;
 }
 .twitter{
-    margin-top: 80px;
 }
 .top{
-    margin-top:250px;
+    margin-top:85px;
 }
