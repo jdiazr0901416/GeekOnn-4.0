@@ -109,7 +109,7 @@ if(userName == null){
                       <div class="span4">
                         <center><i class="icon-picture imagen-publicacion-nula-mini"></i></center>
                       </div>
-                      <div class="span8">
+                      <div class="span7">
                         <center><h4>Titulo publicación</h4></center><hr class="clase-hr">
                         <p align="justify">esta es la breve descripción de la publicacion que estamos mostrando</p>
                       </div>

@@ -12,7 +12,7 @@ function informacionPerfil(){
       {
       if (conexion.readyState===4 && conexion.status===200)
         {
-        document.getElementById("respuestaPerfil").innerHTML=conexion.responseText;
+        document.getElementById("recibidor-ajax-perfil").innerHTML=conexion.responseText;
         }
       }
     conexion.open("GET","recursos/ajax/acciones/perfil/ajaxPerfil.jsp",true);
@@ -32,7 +32,7 @@ function amigosPerfil(){
       {
       if (conexion.readyState===4 && conexion.status===200)
         {
-        document.getElementById("respuestaPerfil").innerHTML=conexion.responseText;
+        document.getElementById("recibidor-ajax-perfil").innerHTML=conexion.responseText;
         }
       }
     conexion.open("GET","recursos/ajax/acciones/perfil/ajaxAmigos.jsp",true);

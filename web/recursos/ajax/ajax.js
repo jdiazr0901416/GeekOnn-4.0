@@ -40,7 +40,7 @@ function respuestaPerfil(){
       if (conexion.readyState===4 && conexion.status===200)
         {
         document.getElementById("recibidor-ajax-geekonn").innerHTML=conexion.responseText;
-        document.getElementById("informacion-perfil").addEventListener("click", informacionPerfil , false);
+        document.getElementById("acerca-perfil").addEventListener("click", informacionPerfil , false);
         document.getElementById("amigos-perfil").addEventListener("click", amigosPerfil , false);
         document.getElementById("ultimas-opiniones-perfil").addEventListener("click", ultimasOpiniones , false);
         document.getElementById("favoritos-perfil").addEventListener("click", favoritos , false);

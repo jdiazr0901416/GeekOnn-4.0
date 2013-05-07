@@ -1,4 +1,11 @@
 .iconos-menu-perfil{
+    
+}
+.iconos-menu-perfil:hover{
     border-bottom: 3px solid;
+    border-color: rgb(215,215,215);
+}
+#recibidor-ajax-perfil{
+    border-top: 2px solid;
     border-color: rgb(215,215,215);
 }
