@@ -409,4 +409,39 @@ public class SentenciasSQL {
     }  
 /**********************************************************************************************/
 /****************************publicaciones*********************************/
+    /*********************************INSERTAR A TABLA DE USUARIOS ONLINE**************************************************/    
+public void ponerOnline(String Username){
+    try{
+        statement=conexion.createStatement();
+	statement.execute("INSERT INTO usuariosonline " +  
+                "(usuario) " +
+                "VALUES("
+                + "'" + Username + "');" );
+        System.out.print("ponerOnline() Correcto ya esta Online");
+		}catch(SQLException e){
+			System.out.println("SQLError en ponerOnline SentenciasSQL");
+		}
+}
+public boolean comprobarSiEstaOnline(String Username) throws SQLException{
+        ResultSet rs = null;
+        try{
+        String sql = "SELECT * FROM usuariosonline WHERE usuario='" + 
+                    Username + "'";
+        PreparedStatement ps = conexion.prepareStatement(sql);
+        rs = ps.executeQuery();
+        return rs.next();
+        }catch(SQLException e){
+            System.out.print("Error en SentenciasSQL METODO: comprobarSiEstaOnline");
+        }
+        return rs.next();
+   }
+public void ponerOffline(String Username){
+    try{
+        statement=conexion.createStatement();
+	statement.execute("DELETE FROM usuariosonline WHERE usuario='"+Username+"'");
+        System.out.print("ponerOffline() Correcto");
+		}catch(SQLException e){
+			System.out.println("SQLError en ponerOffline SentenciasSQL");
+		}
+}
 }

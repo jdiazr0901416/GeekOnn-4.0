@@ -125,21 +125,21 @@ if(userName == null){
               <div class="span6 offset3">
                   <div class="row-fluid">
                     <div class="span2">
-                        <center><i class="icon-home iconos-menu" id="M-home"></i></center>
+                        <center><i class="icon-home iconos-menu" id="M-home" rel="popover" data-content="Observa todas los nuevos avances tecnologicos que tus amigos tienen para ti" data-original-title="NewsFeed"></i></center>
                     </div>
                     <div class="span2">
-                        <center><i class="icon-user iconos-menu"></i></center>
+                        <center><i class="icon-user iconos-menu" id="M-perfil"  rel="popover" data-content="Revisa lo que tienes para mostrar hacia tus amigos en geekonn, aqui estan tus datos y demas" data-original-title="Perfil"></i></center>
                     </div>
                     <div class="span2">
-                        <center><i class="icon-envelope-alt iconos-menu"></i></center>
+                        <center><i class="icon-envelope-alt iconos-menu" id="M-mensajes"  rel="popover" data-content="Comunicate con tus amigos, no te quedes con las palabras en la mente" data-original-title="Mensajes"></i></center>
                     </div>
-                    <div class="span2">
+                    <div class="span2" id="M-amigos"  rel="popover" data-content="Aqui estan los enlaces a lois muros de tus amigos, hay varias opciones de control aqui" data-original-title="Amigos">
                         <center><i class="icon-group iconos-menu"></i></center>
                     </div>
-                    <div class="span2">
+                    <div class="span2" id="M-opiniones"  rel="popover" data-content="comparte algo nuevo al mundo geek, que nadie se quede sin saberlo" data-original-title="Opiniones">
                         <center><i class="icon-comments iconos-menu"></i></center>
                     </div>
-                    <div class="span2">
+                    <div class="span2" id="M-opciones"  rel="popover" data-content="Cambia la configuracion de tu cuenta" data-original-title="Opciones">
                         <center><i class="icon-edit iconos-menu"></i></center>
                     </div>
                   </div>

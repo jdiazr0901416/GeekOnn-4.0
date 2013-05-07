@@ -62,7 +62,7 @@ public class InicioSesion extends HttpServlet {
                     //Significa que la cuenta si existe
                     //OBTENGO EL NOMBRE DEL USUARIO Y LO GUARDO EN UNA SESION
                     int idUsuario = sentenciasSQL.devolverIDUsuario(correoOUsuario);
-                    String Username = sentenciasSQL.ObtenerUsernameSabiendoElid(idUsuario);
+                    String Username = sentenciasSQL.ObtenerUsernameSabiendoId(idUsuario);
                     respuesta.setAttribute("sessionUsername", Username);
                     respuesta.setAttribute("sessionIdUsuario", idUsuario);
                     if(sentenciasSQL.comprobarSiEstaOnline(Username)){

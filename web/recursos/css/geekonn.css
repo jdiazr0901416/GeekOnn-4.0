@@ -3,6 +3,41 @@ body{
     padding-top: 50px;
     padding-bottom: 60px;
 }
+.tituloNF{
+    background-color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+#tituloNF{
+    background-color: rgb(65,133,245);
+    font-size: 16px;
+    font-weight: bold;
+}
+#tituloP{
+    background-color: rgb(140,196,116);
+    font-size: 16px;
+    font-weight: bold;
+}
+#tituloM{
+    background-color: rgb(251,203,67);
+    font-size: 16px;
+    font-weight: bold;
+}
+#tituloA{
+    background-color: rgb(228,111,97);
+    font-size: 16px;
+    font-weight: bold;
+}
+#tituloO{
+    background-color: rgb(188,86,121);
+    font-size: 16px;
+    font-weight: bold;
+}
+#tituloOO{
+    background-color: rgb(157,38,29);
+    font-size: 16px;
+    font-weight: bold;
+}
 #nav-imgUsuario-Nombre{
   margin-top: 5px;
 }
@@ -46,11 +81,6 @@ body{
     color: white;
     font-size: 50px;
 }
-.iconos-menu:hover{
-    color: white;
-    font-size: 50px;
-    zoom: 110%
-}
 .top{
     margin-top: 20px;
 }
@@ -75,3 +105,4 @@ body{
     overflow-y: scroll;
     max-height: 750px;
 }
+
