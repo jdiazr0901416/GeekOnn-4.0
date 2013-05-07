@@ -1,6 +1,7 @@
 document.write("<script type='text/javascript' src='recursos/ajax/acciones/amigos/ajaxAmigos.js'></script>");
 document.write("<script type='text/javascript' src='recursos/ajax/acciones/perfil/ajaxPerfil.js'></script>");
 function respuestaNewsFeed(){
+    var str=1;
     var conexion;
     if (window.XMLHttpRequest)
       {
@@ -14,11 +15,13 @@ function respuestaNewsFeed(){
       {
       if (conexion.readyState===4 && conexion.status===200)
         {
-        document.getElementById("contenedor-principal-geekoonn").innerHTML=conexion.responseText;
+        document.getElementById("recibidor-ajax-geekonn").innerHTML=conexion.responseText;
         }
       }
     conexion.open("GET","recursos/ajax/menu/newsFeed.jsp",true);
     conexion.send();
+    imprimirTitulo(str);
+    
 }
 
 function respuestaPerfil(){
@@ -105,6 +108,27 @@ function respuestaOpiniones(){
         }
       }
     conexion.open("GET","recursos/ajax/menu/opiniones.jsp",true);
+    conexion.send();
+}
+function imprimirTitulo(str){
+    var titulo=str;
+    var conexion;
+    if (window.XMLHttpRequest)
+      {
+      conexion=new XMLHttpRequest();
+      }
+    else
+      {
+      conexion=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+    conexion.onreadystatechange=function()
+      {
+      if (conexion.readyState===4 && conexion.status===200)
+        {
+        document.getElementById("header").innerHTML=conexion.responseText;
+        }
+      }
+    conexion.open("GET","recursos/ajax/acciones/imprimeTitulo.jsp?titulo="+titulo,true);
     conexion.send();
 }
 $(document).on('ready', inicio());

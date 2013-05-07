@@ -84,7 +84,7 @@ if(userName == null){
           <div class="row-fluid separador">
           </div>
           <div class="row-fluid contenedor-principal">
-              <div class="span8 offset1 top ">
+              <div class="span8 offset1 top" id="recibidor-ajax-geekonn">
                   <center><h3>Lo que esta pasando en geekonn en estos momentos</h3></center><hr>
                   <!-- beta publicacion -->
                   <div class="span8 offset2">
@@ -125,7 +125,7 @@ if(userName == null){
               <div class="span6 offset3">
                   <div class="row-fluid">
                     <div class="span2">
-                        <center><i class="icon-home iconos-menu"></i></center>
+                        <center><i class="icon-home iconos-menu" id="M-home"></i></center>
                     </div>
                     <div class="span2">
                         <center><i class="icon-user iconos-menu"></i></center>
@@ -164,7 +164,8 @@ if(userName == null){
     <script src="recursos/bootstrap/docs/assets/js/bootstrap-collapse.js"></script>
     <script src="recursos/bootstrap/docs/assets/js/bootstrap-carousel.js"></script>
     <script src="recursos/bootstrap/docs/assets/js/bootstrap-typeahead.js"></script>
-
+    <script src="recursos/ajax/ajax.js"></script>
+    <script src="recursos/ajax/popOvers/popOvers.js"></script>
   </body>
 </html>
 <%}%>
