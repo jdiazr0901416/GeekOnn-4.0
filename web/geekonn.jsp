@@ -27,6 +27,7 @@ if(userName == null){
     <link href="recursos/bootstrap/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link rel="stylesheet" href="recursos/Font-Awesome-More/docs/assets/css/font-awesome.min.css">
     <link href="recursos/bootstrap/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+     <!--<script src="recursos/ajax/toltip/ajaxToltip.js"></script>-->
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -166,6 +167,6 @@ if(userName == null){
     <script src="recursos/bootstrap/docs/assets/js/bootstrap-typeahead.js"></script>
     <script src="recursos/ajax/ajax.js"></script>
     <script src="recursos/ajax/popOvers/popOvers.js"></script>
-  </body>
+     <!--<script src="recursos/ajax/toltip/ajaxToltip.js"></script>-->
 </html>
 <%}%>

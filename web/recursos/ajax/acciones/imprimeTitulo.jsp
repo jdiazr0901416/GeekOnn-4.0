@@ -49,6 +49,26 @@ if(userName == null){
         System.out.println("entre");
         out.println("<center><h1>News Feed</h1></center>");
     }
+    if(titulo==2){
+        System.out.println("entre");
+        out.println("<center><h1>Perfil</h1></center>");
+    }
+    if(titulo==3){
+        System.out.println("entre");
+        out.println("<center><h1>Mensajes</h1></center>");
+    }
+    if(titulo==4){
+        System.out.println("entre");
+        out.println("<center><h1>Amigos</h1></center>");
+    }
+    if(titulo==5){
+        System.out.println("entre");
+        out.println("<center><h1>Publicaciones</h1></center>");
+    }
+    if(titulo==6){
+        System.out.println("entre");
+        out.println("<center><h1>Opciones</h1></center>");
+    }
 %>
   </body>
 </html>

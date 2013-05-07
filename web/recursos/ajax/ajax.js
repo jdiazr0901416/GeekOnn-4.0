@@ -25,6 +25,7 @@ function respuestaNewsFeed(){
 }
 
 function respuestaPerfil(){
+    var str=2;
     var conexion;
     if (window.XMLHttpRequest)
       {
@@ -38,18 +39,19 @@ function respuestaPerfil(){
       {
       if (conexion.readyState===4 && conexion.status===200)
         {
-        document.getElementById("contenedor-principal-geekoonn").innerHTML=conexion.responseText;
+        document.getElementById("recibidor-ajax-geekonn").innerHTML=conexion.responseText;
         document.getElementById("informacion-perfil").addEventListener("click", informacionPerfil , false);
         document.getElementById("amigos-perfil").addEventListener("click", amigosPerfil , false);
         document.getElementById("ultimas-opiniones-perfil").addEventListener("click", ultimasOpiniones , false);
         document.getElementById("favoritos-perfil").addEventListener("click", favoritos , false);
         }
       }
-    conexion.open("GET","recursos/ajax/menu/perfilV2.jsp",true);
+    conexion.open("GET","recursos/ajax/menu/perfil.jsp",true);
     conexion.send();
+    imprimirTitulo(str);
 }
 function respuestaMensajes(){
-    
+    var str=3;
     var conexion;
     if (window.XMLHttpRequest)
       {
@@ -63,13 +65,15 @@ function respuestaMensajes(){
       {
       if (conexion.readyState===4 && conexion.status===200)
         {
-        document.getElementById("contenedor-principal-geekoonn").innerHTML=conexion.responseText;
+        document.getElementById("recibidor-ajax-geekonn").innerHTML=conexion.responseText;
         }
       }
     conexion.open("GET","recursos/ajax/menu/mensajes.jsp",true);
     conexion.send();
+    imprimirTitulo(str);
 }
 function respuestaAmigos(){
+    var str=4;
     var conexion;
     if (window.XMLHttpRequest)
       {
@@ -83,14 +87,16 @@ function respuestaAmigos(){
       {
       if (conexion.readyState===4 && conexion.status===200)
         {
-        document.getElementById("contenedor-principal-geekoonn").innerHTML=conexion.responseText;
+        document.getElementById("recibidor-ajax-geekonn").innerHTML=conexion.responseText;
         
         }
       }
     conexion.open("GET","recursos/ajax/menu/amigos.jsp",true);
     conexion.send();
+    imprimirTitulo(str);
 }
 function respuestaOpiniones(){
+    var str=5;
     var conexion;
     if (window.XMLHttpRequest)
       {
@@ -104,11 +110,34 @@ function respuestaOpiniones(){
       {
       if (conexion.readyState===4 && conexion.status===200)
         {
-        document.getElementById("contenedor-principal-geekoonn").innerHTML=conexion.responseText;
+        document.getElementById("recibidor-ajax-geekonn").innerHTML=conexion.responseText;
         }
       }
     conexion.open("GET","recursos/ajax/menu/opiniones.jsp",true);
     conexion.send();
+    imprimirTitulo(str);
+}
+function respuestaOpciones(){
+    var str=6;
+    var conexion;
+    if (window.XMLHttpRequest)
+      {
+      conexion=new XMLHttpRequest();
+      }
+    else
+      {
+      conexion=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+    conexion.onreadystatechange=function()
+      {
+      if (conexion.readyState===4 && conexion.status===200)
+        {
+        document.getElementById("recibidor-ajax-geekonn").innerHTML=conexion.responseText;
+        }
+      }
+    conexion.open("GET","recursos/ajax/menu/opciones.jsp",true);
+    conexion.send();
+    imprimirTitulo(str);
 }
 function imprimirTitulo(str){
     var titulo=str;
@@ -138,6 +167,7 @@ $(document).on('ready', inicio());
       $('#M-mensajes').on('click', respuestaMensajes);
       $('#M-amigos').on('click', respuestaAmigos);
       $('#M-opiniones').on('click', respuestaOpiniones);
+      $('#M-opciones').on('click', respuestaOpciones);
     }
     
 
