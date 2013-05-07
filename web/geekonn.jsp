@@ -59,7 +59,17 @@ if(userName == null){
           </a>
           <div class="nav-collapse collapse">
             <ul class="nav pull-right">
-              <li><a href="#myModal" data-toggle="modal" data-target="#myModal" id="a-iniciar-sesion" class="boton-iniciar-sesion"><i class="icon-off icon-2x icon-white"></i>&nbsp;<b>Inicia Sesión</b></a></li>
+              <div class="btn-group">
+                <button  data-toggle="dropdown"><img alt='' src="recursos/imagenes/imagenesUsuario/navbar/icon-user.png"></button>
+                <ul class="dropdown-menu pull-right">
+                  <li><a onclick="respuestaConfiguracion()">Opciones</a></li>
+                  <li class="divider"></li>
+                  <li><a href="LogOut">Cerrar Sesión</a></li>
+                </ul>
+              </div>
+            </ul>
+            <ul class="nav pull-right">
+              <li><a href="perfilUsuario.html" id="nav-imgUsuario-Nombre"><%=(String)session.getAttribute("sessionUsername")%></a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -73,20 +83,42 @@ if(userName == null){
           </div>
           <div class="row-fluid separador">
           </div>
+          <div class="row-fluid contenedor-principal">
+              <div class="span9">
+                  
+              </div>
+              <div class="span3">
+                  
+              </div>
+          </div>
       </div>
     
     <!-- navbar bootom -->
-      <div class="navbar navbar-inverse navbar-fixed-bottom">
-        <div class="navbar-inner">
-          <div class="container-fluid">
-            <div class="nav-collapse collapse">
-              <ul class="nav pull-left">
-                <li><img src="recursos/imagenes/index/ipn.png" alt=""></li>
-              </ul>
-              <ul class="nav pull-right">
-                <li><img src="recursos/imagenes/index/cecyt9.png" alt=""></li>
-              </ul>
-            </div><!--/.nav-collapse -->
+      <div class="navbar navbar-inverse navbar-fixed-bottom" id="navbar-menu">
+        <div class="navbar-inner navbar-menu">
+          <div class="row-fluid">
+              <div class="span6 offset3">
+                  <div class="row-fluid">
+                    <div class="span2">
+                        <center><i class="icon-home iconos-menu"></i></center>
+                    </div>
+                    <div class="span2">
+                        <center><i class="icon-user iconos-menu"></i></center>
+                    </div>
+                    <div class="span2">
+                        <center><i class="icon-envelope iconos-menu"></i></center>
+                    </div>
+                    <div class="span2">
+                        <center><i class="icon-group iconos-menu"></i></center>
+                    </div>
+                    <div class="span2">
+                        <center><i class="icon-comments iconos-menu"></i></center>
+                    </div>
+                    <div class="span2">
+                        <center><i class="icon-edit iconos-menu"></i></center>
+                    </div>
+                  </div>
+             </div>
           </div>
         </div>
       </div>
@@ -110,3 +142,4 @@ if(userName == null){
 
   </body>
 </html>
+<%}%>

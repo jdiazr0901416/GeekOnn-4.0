@@ -236,10 +236,10 @@
           </div>
         </div>
       </div>
-      </form>
       <div class="modal-footer">
           <div class="span6"><h6 class="pull-left">¿No estas registrado?<a href="registro.jsp">Registrate</a></h6></div>
           <button class="btn btn-danger" type="submit"><strong>Iniciar sesión</strong></button>
+      </form>
       </div>
     </div>
 <!-- Modal -->      

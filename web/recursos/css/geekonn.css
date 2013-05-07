@@ -1,11 +1,50 @@
+body{
+    background-color: rgb(157,38,29);
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+@media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+.sidebar-nav {
+        padding: 9px 0;
+      }
+.boton-iniciar-sesion{
+    color:white;
+    margin-top: 2px;
+}
+@font-face{
+    font-family: 'spincycle';
+    src: url('../fuentes/spincycle.ttf'),url('../fuentes/spincycle.eot'); /* IE9 */
+}
 .header{
     font-family: 'spincycle';
     background-color: rgb(157,38,29);
     color: white;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 13px;
+    padding-bottom: 10px;
 }
 .separador{
 	background-color: rgb(240,240,240);
 	height: 15px;
+}
+#navbar-menu{
+}
+.navbar-menu{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.iconos-menu{
+    color: white;
+    font-size: 50px;
+}
+.iconos-menu:hover{
+    color: white;
+    font-size: 50px;
+    zoom: 110%
 }
